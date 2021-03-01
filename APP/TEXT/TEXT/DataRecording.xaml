@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TEXT"
+             x:Class="TEXT.DataRecording" Padding="20">
+
+    <ContentPage.BindingContext>
+	    <vm:DataViewModel></vm:DataViewModel>
+    </ContentPage.BindingContext>
+
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="{Binding RECORD_STATE}"
+                   FontSize="15"
+                   FontAttributes="Bold"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="0" Grid.ColumnSpan="2"></Label>
+
+            <Label Text="Inside Pocket"
+                   FontAttributes="Bold"
+                   FontSize="20"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="End"
+                   Grid.Row="1" Grid.ColumnSpan="2"></Label>
+
+            <Button Text="Start"
+                    BackgroundColor="#009682"
+                    TextColor="White"
+                    Clicked="Button_Clicked"
+                    Grid.Row="2" Grid.Column="0"></Button>
+            <Button Text="Stop"
+                    BackgroundColor="#FF697D"
+                    TextColor="White"
+                    Clicked="Button_Clicked_1"
+                    Grid.Row="2" Grid.Column="1"></Button>
+
+            <Label Text="Outside Pocket"
+                   FontAttributes="Bold"
+                   FontSize="20"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="End"
+                   Grid.Row="3" Grid.ColumnSpan="2"></Label>
+
+            <Button Text="Start"
+                    BackgroundColor="#009682"
+                    TextColor="White"
+                    Clicked="Button_Clicked_3"
+                    Grid.Row="4" Grid.Column="0"></Button>
+            <Button Text="Stop"
+                    BackgroundColor="#FF697D"
+                    TextColor="White"
+                    Clicked="Button_Clicked_4"
+                    Grid.Row="4" Grid.Column="1"></Button>
+
+            <Entry Placeholder="Input your own Label"
+                   VerticalTextAlignment="End"
+                   HorizontalTextAlignment="Center"
+                   Keyboard="Chat"
+                   IsPassword="False"
+                   Completed="Entry_Completed"
+                   FontAttributes="Bold"
+                   FontSize="20"
+                   Grid.Row="5" Grid.ColumnSpan="2"></Entry>
+
+            <Button Text="Start"
+                    BackgroundColor="#009682"
+                    TextColor="White"
+                    Clicked="Button_Clicked_5"
+                    Grid.Row="6" Grid.Column="0"></Button>
+            <Button Text="Stop"
+                    BackgroundColor="#FF697D"
+                    TextColor="White"
+                    Clicked="Button_Clicked_6"
+                    Grid.Row="6" Grid.Column="1"></Button>
+
+            <Button Text="Data Reading"
+                    Clicked="Button_Clicked_2"
+                    BackgroundColor="#BFBFBF"
+                    Grid.Row="8" Grid.ColumnSpan="2"></Button>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

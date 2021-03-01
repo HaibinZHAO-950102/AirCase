@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TEXT"
+             x:Class="TEXT.MainPage">
+    <StackLayout Padding="20"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center"
+                 Spacing="50">
+        <BoxView HeightRequest="20" BackgroundColor="Transparent"></BoxView>
+        <Image Aspect="AspectFill" Source="AirCase.png"></Image>
+        <BoxView HeightRequest="20" BackgroundColor="Transparent"></BoxView>
+        <Button Text="Start"
+            Clicked="Button_Clicked"></Button>
+        <BoxView HeightRequest="20" BackgroundColor="Transparent"></BoxView>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <Label Text="Developed by Haibin Zhao"
+                   FontSize="12"
+                   TextColor="Gray"
+                   HorizontalTextAlignment="Center"></Label>
+            <Label Text="Telecooperation Office"
+                   FontSize="10"
+                   TextColor="Gray"
+                   HorizontalTextAlignment="Center"></Label>
+            <Label Text="Version 1.0"
+                   FontSize="10"
+                   TextColor="Gray"
+                   HorizontalTextAlignment="Center"></Label>
+        </StackLayout>
+        
+
+    </StackLayout>
+</ContentPage>

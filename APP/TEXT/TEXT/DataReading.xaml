@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TEXT"
+             x:Class="TEXT.DataReading" Padding="20">
+
+    <ContentPage.BindingContext>
+	    <vm:DataViewModel></vm:DataViewModel>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Temperature"
+                   FontSize="20"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="0" Grid.Column="0"></Label>
+
+            <Label Text="Pressure"
+                   FontSize="20"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="1" Grid.Column="0"></Label>
+
+            <Label Text="Humidity"
+                   FontSize="20"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="2" Grid.Column="0"></Label>
+
+            <Label Text="VOC"
+                   FontSize="20"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="3" Grid.Column="0"></Label>
+
+
+            <Label Text="Altitude"
+                   FontSize="20"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="4" Grid.Column="0"></Label>
+
+            <Label Text="CO2"
+                   FontSize="20"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="5" Grid.Column="0"></Label>
+
+            <Label x:Name="temperature"
+                   Text="{Binding TEMPERATURE}"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="0" Grid.Column="1"></Label>
+
+            <Label x:Name="pressure"
+                   Text="{Binding PRESSURE}"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="1" Grid.Column="1"></Label>
+
+            <Label x:Name="humidity"
+                   Text="{Binding HUMIDITY}"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="2" Grid.Column="1"></Label>
+
+            <Label x:Name="voc"
+                   Text="{Binding VOC}"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="3" Grid.Column="1"></Label>
+
+            <Label x:Name="altitude"
+                   Text="{Binding ALTITUDE}"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="4" Grid.Column="1"></Label>
+
+            <Label x:Name="co2"
+                   Text="{Binding CO2}"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="5" Grid.Column="1"></Label>
+
+            <Button Text="Start"
+                    Clicked="Button_Clicked"
+                    BackgroundColor="#BFBFBF"
+                    Grid.Row="6" Grid.ColumnSpan="2"></Button>
+
+            <Button Text="Bluetooth"
+                    Clicked="Button_Clicked_2"
+                    BackgroundColor="#BFBFBF"
+                    Grid.Row="7" Grid.Column="0"></Button>
+
+            <Button Text="Data Recording"
+                    Clicked="Button_Clicked_3"
+                    BackgroundColor="#BFBFBF"
+                    Grid.Row="7" Grid.Column="1"></Button>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
